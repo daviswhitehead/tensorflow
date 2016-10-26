@@ -37,6 +37,7 @@ def main(_):
 	mnist = input_data.read_data_sets(FLAGS.data_dir, one_hot=True)
 
 	# Create the model
+	# Creates a 2D tensor (list of lists) of shape [n, 784]
 	x = tf.placeholder(tf.float32, [None, 784])
 	W = tf.Variable(tf.zeros([784, 10]))
 	b = tf.Variable(tf.zeros([10]))
